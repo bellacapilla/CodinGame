@@ -5,7 +5,11 @@ def textToBin(stringmessage):
     newBinText = []
 
     for i in stringmessage:
-        newBinText.append(bin(ord(i))[2:])
+        if len(bin(ord(i))[2:]) == 7:
+            newBinText.append(bin(ord(i))[2:])
+        else:
+            newBinText.append('0' + bin(ord(i))[2:])
+
     return ''.join(newBinText)
 
 def binToChuck(newBinText):

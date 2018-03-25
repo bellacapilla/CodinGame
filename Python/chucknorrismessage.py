@@ -1,6 +1,7 @@
 import System
 import binascii
 
+# Creates a binary string out of a ASCII string
 def textToBin(stringmessage):
     newBinText = []
 
@@ -12,11 +13,11 @@ def textToBin(stringmessage):
 
     return ''.join(newBinText)
 
+# Converts the binary string to unary string
 def binToChuck(newBinText):
     newChuckNorrisMessage = []
     i = 0
     counter = 0
-    holder = ""
 
     while i < len(newBinText):
         if (i+1) < len(newBinText):
@@ -56,7 +57,7 @@ def binToChuck(newBinText):
                     newChuckNorrisMessage.append("00" + " " + ("0" * counter))
                     return ''.join(newChuckNorrisMessage)
 
-
+# Calls for all other functions with input
 def convertToChuckNorrisMessage(messageString):
     newBinString = textToBin(messageString)
     newMessage = binToChuck(newBinString)

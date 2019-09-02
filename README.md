@@ -1,2 +1,2 @@
-# CodinGame
-My solutions for CodinGame Puzzles
+# Challenges Solutions
+My solutions for challenges and puzzles
